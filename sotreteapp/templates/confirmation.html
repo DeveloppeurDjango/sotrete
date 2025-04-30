@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SOTRETE - Confirmation{% endblock %}
+
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">Confirmation</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Confirmation</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Confirmation Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center">
+                <div class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-light d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 100px; height: 100px;">
+                        <i class="fa fa-check text-primary fa-3x"></i>
+                    </div>
+                    <h1 class="display-5 mb-4">Message envoyé avec succès !</h1>
+                    <p class="fs-5 mb-4">Merci {{ nom }} de nous avoir contacté.</p>
+                    <p class="fs-5 mb-4">Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais à l'adresse : {{ email }}</p>
+                    <div class="mt-4">
+                        <a href="{% url 'home' %}" class="btn btn-primary py-3 px-5">Retour à l'accueil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Confirmation End -->
+{% endblock %} 

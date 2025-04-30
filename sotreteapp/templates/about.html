@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SOTRETE - À propos{% endblock %}
+
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">À propos de nous</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">À propos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="{% static 'img/about-1.jpg' %}" alt="">
+                        <img class="img-fluid" src="{% static 'img/about-2.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h4 class="section-title">À propos de nous</h4>
+                    <h1 class="display-5 mb-4">Une entreprise de référence au Tchad</h1>
+                    <p>SOTRETE est une entreprise de droit tchadien spécialisée dans plusieurs domaines :</p>
+                    <p class="mb-4">
+                        - Les études et l'élaboration des Avant-Projets Sommaires (APS)<br>
+                        - Les Avant-Projets Détaillés (APD)<br>
+                        - Les Dossiers d'Appel d'Offres (DAO)<br>
+                        - La construction d'infrastructures<br>
+                        - La surveillance technique des travaux publics
+                    </p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
+                            <h1 class="display-1 mb-n2" data-toggle="counter-up">25</h1>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Années</h3>
+                            <h3>d'Expérience</h3>
+                            <h3 class="mb-0">Professionnelle</h3>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5" href="{% url 'contact' %}">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">Pourquoi nous choisir ?</h4>
+                    <h1 class="display-5 mb-4">Notre expertise à votre service</h1>
+                    <p class="mb-4">Nous mettons notre savoir-faire et notre expérience au service de vos projets pour garantir leur réussite.</p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="{% static 'img/icons/icon-2.png' %}" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Qualité</h3>
+                                    <p class="mb-0">Nous nous engageons à fournir des services de la plus haute qualité.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="{% static 'img/icons/icon-3.png' %}" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Innovation</h3>
+                                    <p class="mb-0">Nous utilisons les dernières technologies et méthodes innovantes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="{% static 'img/icons/icon-4.png' %}" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Expertise</h3>
+                                    <p class="mb-0">Notre équipe est composée d'experts qualifiés et expérimentés.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="{% static 'img/about-2.jpg' %}" alt="">
+                        <img class="img-fluid" src="{% static 'img/about-1.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Notre Équipe</h4>
+                <h1 class="display-5 mb-4">Découvrez notre équipe d'experts</h1>
+            </div>
+            <div class="row g-4">
+                {% for member in team_members %}
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{{ member.image.url }}" alt="{{ member.name }}">
+                            <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                                <div class="btn rounded-circle m-1">
+                                    <a class="btn btn-square rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-1">{{ member.name }}</h5>
+                            <span class="text-primary">{{ member.position }}</span>
+                            {% if member.description %}
+                            <p class="mt-2">{{ member.description }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+{% endblock %} 

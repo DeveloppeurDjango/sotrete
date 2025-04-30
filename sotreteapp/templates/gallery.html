@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SOTRETE - Galerie{% endblock %}
+
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">Galerie</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Galerie</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Gallery Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Notre Galerie</h4>
+                <h1 class="display-5 mb-4">Découvrez nos réalisations en images</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-1.jpg' %}" alt="Project 1">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Construction d'infrastructures</h3>
+                            <p class="mb-4">Réalisation de projets d'envergure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-2.jpg' %}" alt="Project 2">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Études techniques</h3>
+                            <p class="mb-4">Expertise et planification détaillée</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-3.jpg' %}" alt="Project 3">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Surveillance de chantier</h3>
+                            <p class="mb-4">Contrôle qualité et suivi rigoureux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-4.jpg' %}" alt="Project 4">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Rénovation</h3>
+                            <p class="mb-4">Modernisation et amélioration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-5.jpg' %}" alt="Project 5">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Conception architecturale</h3>
+                            <p class="mb-4">Design innovant et fonctionnel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-6.jpg' %}" alt="Project 6">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Aménagement urbain</h3>
+                            <p class="mb-4">Solutions durables et intégrées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container pt-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-2.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Projets réalisés</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">100</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-3.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Clients satisfaits</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">50</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-4.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Années d'expérience</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">25</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+{% endblock %} 

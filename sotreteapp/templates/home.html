@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SOTRETE - Accueil{% endblock %}
+
+{% block content %}
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='{% static 'img/carousel-1.jpg' %}'>">
+                <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">La Société Tchadienne des Réalisations d'Études et des Travaux Environnementaux</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">est une entreprise de droit tchadien spécialisée dans plusieurs domaines, notamment : Les études et l'élaboration des Avant-Projets Sommaires (APS), des Avant-Projets Détaillés (APD) et des Dossiers d'Appel d'Offres (DAO). La construction d'infrastructures. La surveillance technique des travaux publics</p>
+                                <a href="{% url 'about' %}" class="btn btn-primary py-3 px-5 animated slideInLeft">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='{% static 'img/carousel-2.jpg' %}'>">
+                <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">La Société Tchadienne des Réalisations d'Études et des Travaux Environnementaux</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">est une entreprise de droit tchadien spécialisée dans plusieurs domaines, notamment : Les études et l'élaboration des Avant-Projets Sommaires (APS), des Avant-Projets Détaillés (APD) et des Dossiers d'Appel d'Offres (DAO). La construction d'infrastructures. La surveillance technique des travaux publics</p>
+                                <a href="{% url 'about' %}" class="btn btn-primary py-3 px-5 animated slideInLeft">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container pt-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-2.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Approche Design</h3>
+                        <p class="mb-0">Une approche moderne et innovante pour vos projets.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-3.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Solutions Innovantes</h3>
+                        <p class="mb-0">L'innovation au service de vos besoins.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-4.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Gestion de Projet</h3>
+                        <p class="mb-0">Une gestion professionnelle de vos projets de A à Z.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+      <!-- Page Header Start -->
+      <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">Galerie</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Galerie</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Gallery Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Notre Galerie</h4>
+                <h1 class="display-5 mb-4">Découvrez nos réalisations en images</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-1.jpg' %}" alt="Project 1">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Construction d'infrastructures</h3>
+                            <p class="mb-4">Réalisation de projets d'envergure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-2.jpg' %}" alt="Project 2">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Études techniques</h3>
+                            <p class="mb-4">Expertise et planification détaillée</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-3.jpg' %}" alt="Project 3">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Surveillance de chantier</h3>
+                            <p class="mb-4">Contrôle qualité et suivi rigoureux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-4.jpg' %}" alt="Project 4">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Rénovation</h3>
+                            <p class="mb-4">Modernisation et amélioration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-5.jpg' %}" alt="Project 5">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Conception architecturale</h3>
+                            <p class="mb-4">Design innovant et fonctionnel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/project-6.jpg' %}" alt="Project 6">
+                        <div class="service-text p-5">
+                            <h3 class="mb-3">Aménagement urbain</h3>
+                            <p class="mb-4">Solutions durables et intégrées</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container pt-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-2.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Projets réalisés</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">100</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-3.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Clients satisfaits</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">50</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="{% static 'img/icons/icon-4.png' %}" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Années d'expérience</h3>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">25</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="{% static 'img/about-1.jpg' %}" alt="">
+                        <img class="img-fluid" src="{% static 'img/about-2.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h4 class="section-title">À propos de nous</h4>
+                    <h1 class="display-5 mb-4">La Société SOTRETE pour la réalisation de vos projets phares</h1>
+                    <p>Notre engagement envers l'excellence et l'innovation nous permet de réaliser vos projets les plus ambitieux.</p>
+                    <p class="mb-4">Avec SOTRETE, bénéficiez d'une expertise reconnue et d'un savoir-faire éprouvé.</p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
+                            <h1 class="display-1 mb-n2" data-toggle="counter-up">25</h1>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Années</h3>
+                            <h3>d'Expérience</h3>
+                            <h3 class="mb-0">Professionnelle</h3>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5" href="{% url 'about' %}">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Nos Services</h4>
+                <h1 class="display-5 mb-4">Nous proposons une large gamme de services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-1.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-5.png' %}" alt="Icon">
+                            <h3 class="mb-3">Études et Avant-Projets</h3>
+                            <p class="mb-4">Élaboration des Avant-Projets Sommaires (APS) et des Avant-Projets Détaillés (APD)</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-2.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-6.png' %}" alt="Icon">
+                            <h3 class="mb-3">Dossiers d'Appel d'Offres</h3>
+                            <p class="mb-4">Préparation et élaboration des Dossiers d'Appel d'Offres (DAO)</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-3.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-7.png' %}" alt="Icon">
+                            <h3 class="mb-3">Construction d'Infrastructures</h3>
+                            <p class="mb-4">Réalisation et suivi de projets de construction d'infrastructures</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-4.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-8.png' %}" alt="Icon">
+                            <h3 class="mb-3">Surveillance Technique</h3>
+                            <p class="mb-4">Surveillance technique des travaux publics et contrôle qualité</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-5.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-9.png' %}" alt="Icon">
+                            <h3 class="mb-3">Gestion de Projets</h3>
+                            <p class="mb-4">Gestion et coordination complète de vos projets de construction</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="{% static 'img/service-6.jpg' %}" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="{% static 'img/icons/icon-10.png' %}" alt="Icon">
+                            <h3 class="mb-3">Conseil et Expertise</h3>
+                            <p class="mb-4">Conseil technique et expertise dans le domaine de la construction</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Témoignages</h4>
+                <h1 class="display-5 mb-4">Ce que nos clients disent de nous</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static 'img/testimonial-1.jpg' %}">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Une équipe professionnelle et à l'écoute. Excellent travail sur notre projet.</p>
+                        <h5 class="mb-1">Client Satisfait</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static 'img/testimonial-2.jpg' %}">
+                        <div class="btn-square bg-primary rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>Très satisfait de la qualité des services et du professionnalisme de l'équipe.</p>
+                        <h5 class="mb-1">Client Satisfait</h5>
+                        <span class="fst-italic">Profession</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+{% endblock %} 

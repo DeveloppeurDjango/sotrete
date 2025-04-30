@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SOTRETE - {{ article.title }}{% endblock %}
+
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">{{ article.title }}</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Accueil</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Article</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Article Detail Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                    {% if article.image %}
+                    <div class="position-relative overflow-hidden mb-5">
+                        <img class="img-fluid w-100" src="{{ article.image.url }}" alt="{{ article.title }}">
+                    </div>
+                    {% endif %}
+                    <h1 class="display-5 mb-4">{{ article.title }}</h1>
+                    <p class="mb-4">{{ article.description }}</p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                            <i class="fa fa-calendar text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-0">Date de publication</p>
+                            <h5 class="mb-0">{{ article.created_at|date:"d F Y" }}</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+                            <i class="fa fa-folder text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-0">Catégorie</p>
+                            <h5 class="mb-0">{{ article.category }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light p-4 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="mb-4">Articles en relation</h4>
+                        {% for article in aer %}
+                        <div class="d-flex align-items-center mb-4">
+                            {% if article.image %}
+                            <div class="position-relative overflow-hidden" style="width: 100px;">
+                                <img class="img-fluid w-100" src="{{ article.image.url }}" alt="{{ article.title }}">
+                            </div>
+                            {% endif %}
+                            <div class="ms-4">
+                                <h5 class="mb-1">{{ article.title }}</h5>
+                                <a class="text-primary" href="{% url 'detail' article.id %}">Lire plus <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Article Detail End -->
+{% endblock %} 
