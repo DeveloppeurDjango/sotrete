@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ['*']
 
 # Définition des applications
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',  # Whitenoise pour servir les fichiers statiques en développement
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Whitenoise pour servir les fichiers statiques
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -48,7 +48,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Activer la compression et le cache des fichiers statiques
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'sotrete.urls'
@@ -72,13 +71,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'sotrete.wsgi.application'
 
 # Base de données
-# https://docs.djangoproject.com/en/stable/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.parse(config('DATABASE_URL'))
 }
 
 # Validation des mots de passe
-# https://docs.djangoproject.com/en/stable/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -87,14 +84,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalisation
-# https://docs.djangoproject.com/en/stable/topics/i18n/
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
 # Fichiers statiques (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/stable/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'staticfiles'))
 
@@ -103,7 +98,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Type de champ de clé primaire par défaut
-# https://docs.djangoproject.com/en/stable/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configuration de l'email
