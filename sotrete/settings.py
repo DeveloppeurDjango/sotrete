@@ -91,7 +91,7 @@ USE_TZ = True
 
 # Fichiers statiques (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'staticfiles'))
+STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 
 # Fichiers média (Images, Téléchargements)
 MEDIA_URL = '/media/'

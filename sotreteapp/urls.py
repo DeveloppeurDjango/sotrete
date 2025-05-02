@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import home, about, service, contact, confirmation, search, detail, gallery
 from django.conf import settings
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', home, name='home'),
@@ -14,3 +14,4 @@ urlpatterns = [
     path('article/recherche/', search, name="search"),
 ]
 
+urlpatterns += staticfiles_urlpatterns()
