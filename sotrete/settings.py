@@ -26,7 +26,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 
-ALLOWED_HOSTS = ['sotrete.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['sotrete.onrender.com', 'localhost', '127.0.0.1', 'sotrete.com', 'www.sotrete.com']
 
 # Définition des applications
 INSTALLED_APPS = [
