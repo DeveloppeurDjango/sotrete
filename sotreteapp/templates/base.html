@@ -6,11 +6,24 @@
     <meta charset="utf-8">
     <title>{% block title %}SOTRETE - Société Tchadienne des Réalisations d'Études et des Travaux Environnementaux{% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <!-- Ajout de métadonnées SEO -->
+    <meta name="keywords" content="SOTRETE, études environnementales, travaux environnementaux, Tchad, N'Djamena">
+    <meta name="description" content="SOTRETE - Société Tchadienne des Réalisations d'Études et des Travaux Environnementaux basée à N'Djamena, Tchad. Découvrez nos services et projets.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SOTRETE">
+
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="SOTRETE - Études et Travaux Environnementaux au Tchad">
+    <meta property="og:description" content="SOTRETE, une société tchadienne spécialisée dans les études et travaux environnementaux. Contactez-nous à N'Djamena, Tchad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sotrete.com">
+    <meta property="og:image" content="{% static 'img/icons/logo-11.png' %}">
 
     <!-- Favicon -->
     <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Ajout d'une balise canonical pour éviter le contenu dupliqué -->
+    <link rel="canonical" href="https://sotrete.com{% url 'home' %}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +50,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="{% static 'img/icons/icon-1.png' %}" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="{% static 'img/icons/icon-1.png' %}" alt="Icône SOTRETE">
     </div>
     <!-- Spinner End -->
 
@@ -47,15 +60,16 @@
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
                     <a class="text-body px-2" href="tel:+23566466204"><i class="fa fa-phone-alt text-primary me-2"></i>+235 66466204</a>
-                    <a class="text-body px-2" href="mailto:sotretetchad@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i> sotretetchad@gmail.com </a>
+                    <a class="text-body px-2" href="mailto:sotretetchad@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>sotretetchad@gmail.com</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <!-- Ajout de liens réels vers les réseaux sociaux (à remplir avec les vrais liens si disponibles) -->
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="https://facebook.com/sotrete" aria-label="Facebook de SOTRETE"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="https://twitter.com/sotrete" aria-label="Twitter de SOTRETE"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="https://linkedin.com/company/sotrete" aria-label="LinkedIn de SOTRETE"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href="https://instagram.com/sotrete" aria-label="Instagram de SOTRETE"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -65,7 +79,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="{% url 'home' %}" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="{% static 'img/icons/logo-11.png' %}" alt="Icon">SOTRETE</h1>
+            <h1 class="text-primary m-0"><img class="me-3" src="{% static 'img/icons/logo-11.png' %}" alt="Logo SOTRETE">SOTRETE</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -107,7 +121,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">SOTRETE</a>, Tous droits réservés.
+                        © <a href="{% url 'home' %}">SOTRETE</a>, Tous droits réservés.
                     </div>
                 </div>
             </div>
@@ -133,4 +147,4 @@
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
 </body>
-</html> 
+</html>
