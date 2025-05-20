@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import home, about, service, contact, confirmation, search, detail, gallery
 from django.conf import settings
+from django.conf.urls.static import static  # Ajoutez cette importation
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
@@ -12,6 +13,6 @@ urlpatterns = [
     path('confirmation/', confirmation, name='confirmation'),
     path('article/<int:id_article>/', detail, name="detail"),
     path('article/recherche/', search, name="search"),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
