@@ -12,6 +12,6 @@ urlpatterns = [
     path('confirmation/', confirmation, name='confirmation'),
     path('article/<int:id_article>/', detail, name="detail"),
     path('article/recherche/', search, name="search"),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
