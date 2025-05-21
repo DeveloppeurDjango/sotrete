@@ -97,9 +97,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 
 # Fichiers média (Images, Téléchargements)
-# Fichiers média (Images, Téléchargements)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/sotrete/media'  # Modifié pour correspondre au Mount Path sur Render
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Type de champ de clé primaire par défaut
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
