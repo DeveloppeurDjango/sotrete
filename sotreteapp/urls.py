@@ -13,6 +13,7 @@ urlpatterns = [
     path('confirmation/', confirmation, name='confirmation'),
     path('article/<int:id_article>/', detail, name="detail"),
     path('article/recherche/', search, name="search"),
+        path('google439126b94a9dcf8a.html', serve, {'document_root': 'sotreteapp/templates', 'path': 'google439126b94a9dcf8a.html'}),
     path('sitemap.xml', serve, {'document_root': '', 'path': 'sitemap.xml'}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
